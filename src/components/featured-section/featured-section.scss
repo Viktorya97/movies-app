@@ -1,0 +1,104 @@
+.featured-section {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.featured-section__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+  }
+
+.featured-section__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.featured-section__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 5px;
+}
+
+.featured-section__category {
+    font: normal normal bold 24px/42px 'Tajawal', sans-serif;
+    text-align: left;
+    color: #727783;
+}
+
+.featured-section__logo {
+    max-width: 680px;
+    margin-bottom: 22px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.featured-section__details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.featured-section__detail-item {
+    font: normal normal bold 30px/42px 'Tajawal', sans-serif;
+    text-align: left;
+    color: #f1f1f1;
+}
+
+.featured-section__description {
+    margin-top: 10px;
+    margin-bottom: 24px;
+    font: normal normal bold 32px/40px 'Tajawal', sans-serif;
+    text-align: left;
+    color: #f1f1f1;
+}
+
+.featured-section__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+}
+
+.featured-section__play-btn {
+    width: 240px;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 74px;
+    background-color: #f1f1f1;
+    font: normal normal bold 32px/36px 'Tajawal', sans-serif;
+    text-align: center;
+    color: #0c0c0c;
+    cursor: pointer;
+}
+
+.featured-section__more-info-btn {    
+    width: 240px;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 40px;
+    background-color: #2727f5;
+    font: normal normal bold 32px/36px 'Tajawal', sans-serif;
+    text-align: center;
+    color: #f1f1f1;
+    cursor: pointer;
+}

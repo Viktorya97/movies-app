@@ -1,0 +1,122 @@
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 112px;
+    height: 100%;
+    padding: 20px;
+    background-color: #040404;
+    transition: width 0.3s ease-in-out;
+    box-sizing: border-box;
+    z-index: 2;
+
+    .sidebar-menu__profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+
+        .sidebar-menu__profile-avatar {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .sidebar-menu__profile-name {
+            font: normal normal bold 24px/28px 'Tajawal', sans-serif;
+            text-align: left;
+            color: #F1F1F1;
+            cursor: pointer;
+        }
+    }
+
+    .sidebar-menu__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      .sidebar-menu__item {
+        display: flex;
+        align-items: center;  
+        gap: 20px;
+        margin: 0 auto;
+        padding: 12px;
+        font: normal normal normal 20px/24px 'Tajawal', sans-serif;
+        text-align: left;
+        color: #F1F1F1;
+        cursor: pointer;
+  
+        &:hover {
+            border-radius: 12px;
+            padding: 12px;
+            background-color: rgba(59, 72, 109, 0.8);
+        }
+
+        .sidebar-menu__item-icon {
+          img {
+            width: 24px; 
+            height: 24px;
+          }
+        }
+
+        .sidebar-menu__item-text {
+          font-size: 20px;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .sidebar-menu__item_active {
+      background-color: #3B486D;
+      border-radius: 50%;
+    }
+    
+    &_opened {
+      width: 312px;
+      background: linear-gradient(to right, #040404, #040404f2);
+      box-shadow: 0 0 480px 480px #040404f2;
+
+        .sidebar-menu__item {
+          width: 100%;
+          padding: 12px;
+        }
+
+        .sidebar-menu__item_active { 
+          border-radius: 12px !important;
+        }
+    }
+
+    &_closed {
+      .sidebar-menu__profile,
+      .sidebar-menu__additional-menu {
+        opacity: 0;
+      }
+    }
+  
+    .sidebar-menu__additional-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .sidebar-menu__additional-item {
+            font: normal normal bold 18px/22px 'Tajawal', sans-serif;
+            text-align: left;
+            text-transform: uppercase;
+            color: #858688;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+  }
